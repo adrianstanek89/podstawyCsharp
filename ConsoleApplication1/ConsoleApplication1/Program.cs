@@ -11,12 +11,13 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
-            int login, haslo;
-            Console.WriteLine("Wprowadz Login");
-            Console.ReadLine();
-            
+            Login loginManager = new Login();
+            loginManager.Logowanie();
+            Console.ReadKey();
+
+
         }
-      }
     }
+}
 
 
