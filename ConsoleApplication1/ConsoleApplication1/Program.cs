@@ -23,8 +23,9 @@ namespace ConsoleApplication1
             }
             else 
             {
-                Console.WriteLine("podales zła liczbe");
-                Console.ReadLine();               
+                Console.WriteLine("podales zła liczb ");
+                Console.ReadLine()sas;     
+                          
             }
         }
     }
