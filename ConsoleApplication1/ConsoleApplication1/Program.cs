@@ -11,6 +11,7 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
+            int login, haslo;
             Console.WriteLine("Wprowadz Login");
             Console.ReadLine();
             
