@@ -10,7 +10,14 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("siema!");
+            Console.WriteLine("czesc jak masz na imie?");
+            string.imie;
+            imie = Console.ReadLine();
+            Console.WriteLine(imie + ", ile masz lat?");
+            int.wiek;
+            wiek = Console.ReadLine();
+            Console.WriteLine("Czesc" + imie + "fajnie ze masz" + wiek + "lat");
+
         }
     }
 }
