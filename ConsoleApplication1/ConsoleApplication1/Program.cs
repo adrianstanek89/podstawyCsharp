@@ -16,7 +16,10 @@ namespace ConsoleApplication1
             a = int.Parse(Console.ReadLine());
             Console.Write("Podaj wartosc max powyzej 9: ");
              b = int.Parse(Console.ReadLine());
-             if()
+             if(0=< a <= 9)
+            {
+
+            }
             
             int check = 0;
 
