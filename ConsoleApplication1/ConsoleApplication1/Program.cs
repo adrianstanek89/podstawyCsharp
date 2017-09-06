@@ -11,8 +11,19 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
-            Login loginManager = new Login();
-            loginManager.Logowanie();
+            int check = 0;
+
+            int[] tablica = new int[1000];
+
+            Random rand = new Random();
+            for (int i = 0; i < tablica.Length;)
+            {
+                check = rand.Next(0, 1000);
+                Console.WriteLine("" + check);
+                    tablica[i] = check;
+                    i++;
+            }
+
             Console.ReadKey();
 
 
