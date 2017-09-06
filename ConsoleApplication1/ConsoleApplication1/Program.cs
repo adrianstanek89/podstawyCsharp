@@ -24,7 +24,7 @@ namespace ConsoleApplication1
             for (int i = 0; i < tablica.Length;)
             {
                 check = rand.Next(a, b);
-                Console.WriteLine("" + check);
+                Console.WriteLine("liczba: " + check);
                 tablica[i] = check;
                 i++;
             }
