@@ -12,10 +12,12 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             int a, b;
-            Console.Write("Podaj wartosc min: ");
+            Console.Write("Podaj wartosc od 0 do 9: ");
             a = int.Parse(Console.ReadLine());
-            Console.Write("Podaj wartosc max: ");
+            Console.Write("Podaj wartosc max powyzej 9: ");
              b = int.Parse(Console.ReadLine());
+             if()
+            
             int check = 0;
 
             int[] tablica = new int[5];
