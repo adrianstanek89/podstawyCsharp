@@ -11,20 +11,22 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
-            Console.Write("podaj wartosc min");
-
-            Console.Write("Podaj wartosc max")
+            int a, b;
+            Console.Write("Podaj wartosc min: ");
+            a = int.Parse(Console.ReadLine());
+            Console.Write("Podaj wartosc max: ");
+             b = int.Parse(Console.ReadLine());
             int check = 0;
 
-            int[] tablica = new int[1000];
+            int[] tablica = new int[5];
 
             Random rand = new Random();
             for (int i = 0; i < tablica.Length;)
             {
-                check = rand.Next(0, 1000);
+                check = rand.Next(a, b);
                 Console.WriteLine("" + check);
-                    tablica[i] = check;
-                    i++;
+                tablica[i] = check;
+                i++;
             }
 
             Console.ReadKey();
