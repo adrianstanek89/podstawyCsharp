@@ -10,14 +10,30 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            int a, b, wynik;
-            Console.Write("Podaj pierwsza liczbe: ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("Podaj druga liczbe :");
-            b = int.Parse(Console.ReadLine());
-            wynik = a + b;
-            Console.WriteLine("Wynik: " + wynik);
-            Console.ReadLine();
+        poczatek:
+            Random liczby = new Random();
+            int[] all = new int[4];
+          
+
+            for (int i = 0; i < all.Length;)
+            {
+                int liczba = liczby.Next(0, 25);
+                Console.WriteLine("Random number to be checked is -> " + liczba);
+                Console.Read();
+            }
+                int suma = 0;
+
+            Console.WriteLine(all);
+            for (int i = 0; i < 50; i++)
+            {
+                int liczba = liczby.Next(0, 1000);
+                suma += liczba;
+                Console.WriteLine("kolejna liczba => {0}", liczba);
+            }
+
+            Console.WriteLine("suma liczb: {0}", suma); Console.Read();
+            Console.Clear();
+            goto poczatek;
         }
     }
 }
