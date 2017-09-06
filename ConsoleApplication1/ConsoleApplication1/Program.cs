@@ -11,6 +11,9 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
+            Console.Write("podaj wartosc min");
+
+            Console.Write("Podaj wartosc max")
             int check = 0;
 
             int[] tablica = new int[1000];
