@@ -10,10 +10,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Random liczby = new Random();
-            return liczby.Next(0, 1000);
-            Console.WriteLine(a);
-            Console.Read();
+            
         }
     }
 }
