@@ -66,7 +66,6 @@ namespace ConsoleApplication1
 
             two:
             int parz = 0;
-            int z=0;
             int zakres = 0;
 
             int[] tablica = new int[800];
@@ -85,7 +84,14 @@ namespace ConsoleApplication1
       
                 foreach (int element in tablica2)
                 {
-              Console.WriteLine("liczba: "+ element); 
+             // Console.WriteLine("liczba: "+ element); 
+                if (element % 2 == 0)
+                {
+                       
+                   // Console.WriteLine("parzysta: "+ element); 
+                    parz +=element;
+                    Console.WriteLine("suma liczb parzystych: "+ parz); 
+                }
                 }
                                                 
 
