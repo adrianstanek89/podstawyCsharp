@@ -11,9 +11,9 @@ namespace ConsoleApplication1
        
         static void Main(string[] args)
         {
-            int a, b;
+            short a, b;
             Console.Write("Podaj wartosc min w przedziale od 0 do 9 : ");
-            a = int.Parse(Console.ReadLine());
+            a = short.Parse(Console.ReadLine());
 
 
             do
@@ -27,7 +27,7 @@ namespace ConsoleApplication1
                     Console.ReadKey();
                     Console.Clear();
                     Console.Write("Podaj wartosc min w przedziale od 0 do 9 : ");
-                    a = int.Parse(Console.ReadLine());
+                    a = short.Parse(Console.ReadLine());
                  
                 }
                 else if (0 <= a && a < 10)
@@ -40,7 +40,7 @@ namespace ConsoleApplication1
             one:
 
             Console.Write("Podaj wartosc w przedziale 9-99: ");
-            b = int.Parse(Console.ReadLine());
+            b = short.Parse(Console.ReadLine());
 
 
 
@@ -55,7 +55,7 @@ namespace ConsoleApplication1
                     Console.ReadKey();
                     Console.Clear();
                     Console.Write("Podaj wartosc w przedziale 9-99: ");
-                    b = int.Parse(Console.ReadLine());
+                    b = short.Parse(Console.ReadLine());
                 }
                 else if (10 <= b && b < 100)
                 {
@@ -65,21 +65,29 @@ namespace ConsoleApplication1
             while (true);
 
             two:
+            int parz = 0;
+            int z=0;
+            int zakres = 0;
 
-            int check = 0;
-
-            int[] tablica = new int[1000];
+            int[] tablica = new int[800];
 
             Random liczby = new Random();
             for (int i = 0; i < tablica.Length;)
             {
-                check = liczby.Next(a, b);
-                Console.WriteLine("liczba: " + check);
-                tablica[i] = check;
+                zakres = liczby.Next(a, b);
+               // Console.WriteLine("cyfry: " + zakres);
+                tablica[i] = zakres;
                 i++;
-                int[] tablica2 = new int[50];
-
+             
             }
+             int[] tablica2 = new int[50];
+            Array.Copy(tablica,0, tablica2, 0,50);
+      
+                foreach (int element in tablica2)
+                {
+              Console.WriteLine("liczba: "+ element); 
+                }
+                                                
 
             Console.ReadKey();
 
