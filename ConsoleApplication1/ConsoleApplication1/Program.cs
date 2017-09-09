@@ -8,16 +8,18 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        static int NaszFor(int x, int y)
+        {
+            if (y < 0)
+                return x;
+            Console.WriteLine(x);
+            y--;
+            return NaszFor(x + 1, y);
+        }
+
         static void Main(string[] args)
         {
-            int a, b, wynik;
-            Console.Write("Podaj pierwsza liczbe: ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("Podaj druga liczbe :");
-            b = int.Parse(Console.ReadLine());
-            wynik = a + b;
-            Console.WriteLine("Wynik: " + wynik);
-            Console.ReadLine();
+            NaszFor(1, 10);
         }
     }
 }
