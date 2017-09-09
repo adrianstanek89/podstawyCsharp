@@ -56,6 +56,7 @@ namespace ConsoleApplication1
             }
             while (true);
             two:
+            int Nparz = 0;
             int parz = 0;
             int zakres = 0;
             int[] tablica = new int[1000];
@@ -81,12 +82,21 @@ namespace ConsoleApplication1
                     parz += element;
                    
                 }
+                if (element % 2 == 1)
+                {
+
+                    // Console.WriteLine("parzysta: "+ element); 
+                    Nparz += element;
+
+                }
 
 
             }
             Console.WriteLine("suma liczb parzystych: " + parz);
-        
-        Console.ReadKey();
+            Console.WriteLine("suma liczb nie parzystych: " + Nparz);
+            Console.WriteLine("suma wszystjich liczb: " + (Nparz+parz));
+
+            Console.ReadKey();
         }
     }
 }
