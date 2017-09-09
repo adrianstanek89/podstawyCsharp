@@ -79,11 +79,13 @@ namespace ConsoleApplication1
 
                     // Console.WriteLine("parzysta: "+ element); 
                     parz += element;
-                    Console.WriteLine("suma liczb parzystych: " + parz);
+                   
                 }
-            }
 
-            Console.ReadKey();
+            }
+            Console.WriteLine("suma liczb parzystych: " + parz);
+        
+        Console.ReadKey();
         }
     }
 }
