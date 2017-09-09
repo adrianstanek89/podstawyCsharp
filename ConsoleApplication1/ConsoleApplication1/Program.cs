@@ -19,7 +19,7 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
-            NaszFor(1, 10);
+            NaszFor(1, 10); 
         }
     }
 }
