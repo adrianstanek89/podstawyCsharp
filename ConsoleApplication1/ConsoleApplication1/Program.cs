@@ -8,16 +8,31 @@ namespace ConsoleApplication1
 {
     class Program
     {
+        enum Months
+        {
+            January,
+            February,
+            March,
+            April,
+            May,
+            June,
+            July,
+            August,
+            September,
+            October,
+            November,
+            December
+        }
+
         static void Main(string[] args)
         {
-            int a, b, wynik;
-            Console.Write("Podaj pierwsza liczbe: ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("Podaj druga liczbe :");
-            b = int.Parse(Console.ReadLine());
-            wynik = a + b;
-            Console.WriteLine("Wynik: " + wynik);
-            Console.ReadLine();
+            var values = Enum.GetValues(typeof(Months));
+            foreach (var month in values)
+            {
+                Console.WriteLine(month);
+            }
+
+            Console.ReadKey();
         }
     }
 }
