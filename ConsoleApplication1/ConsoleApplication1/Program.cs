@@ -94,7 +94,7 @@ namespace ConsoleApplication1
             }
             Console.WriteLine("suma liczb parzystych: " + parz);
             Console.WriteLine("suma liczb nie parzystych: " + Nparz);
-            Console.WriteLine("suma wszystjich liczb: " + (Nparz+parz));
+            Console.WriteLine("suma wszystkich liczb: " + (Nparz+parz));
 
             Console.ReadKey();
         }
