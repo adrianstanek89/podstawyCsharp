@@ -8,16 +8,28 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void Main(string[] args)
+        public static class StringExtensions
         {
-            int a, b, wynik;
-            Console.Write("Podaj pierwsza liczbe: ");
-            a = int.Parse(Console.ReadLine());
-            Console.Write("Podaj druga liczbe :");
-            b = int.Parse(Console.ReadLine());
-            wynik = a + b;
-            Console.WriteLine("Wynik: " + wynik);
-            Console.ReadLine();
+            public static List<int> blackListNumber = new List<int>() ;
+            public static bool IsBadNumber(this string number, IEnumerable<int> blackListNumber);
+           
+
+                private static void Randomer()
+            {
+                Random rand = new Random();
+                for(int i=0; i < 50; i++)
+                {
+                    blackListNumber.Add(rand.Next(0, 100));
+                }
+            }
+            {
+                if (blacklistNumber.Contains(number))
+                {
+                    return true;
+                }
+                return false;
+            }
         }
+    }
     }
 }
