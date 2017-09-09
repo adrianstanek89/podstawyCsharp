@@ -82,6 +82,7 @@ namespace ConsoleApplication1
                    
                 }
 
+
             }
             Console.WriteLine("suma liczb parzystych: " + parz);
         
