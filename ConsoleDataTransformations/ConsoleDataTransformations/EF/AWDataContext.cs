@@ -4,6 +4,7 @@ namespace ConsoleDataTransformations.EF
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.Collections.Generic;
 
     public partial class AWDataContext : DbContext
     {
@@ -17,6 +18,7 @@ namespace ConsoleDataTransformations.EF
         public virtual DbSet<WorkOrder> WorkOrder { get; set; }
         public virtual DbSet<SalesOrderDetail> SalesOrderDetail { get; set; }
         public virtual DbSet<SalesOrderHeader> SalesOrderHeader { get; set; }
+        public IEnumerable<object> Products { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

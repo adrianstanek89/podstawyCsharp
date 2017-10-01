@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleDataTransformations.EF;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -12,37 +13,12 @@ namespace ConsoleDataTransformations
         static void Main(string[] args)
 
         {
-            using (SqlConnection connection = new SqlConnection(@"data source=RENT-KOMPUTER;initial catalog=AdventureWorks2012;integrated security=SSPI"))
+
+            AWDataContext dbContext = new AWDataContext();
+            foreach (var product in dbContext.Product)
             {
-                try
-                {
-                    connection.Open();
-                    SqlCommand command = connection.CreateCommand();
-                    command.CommandText = "SELECT [Name], [ProductNumber], [Color] FROM[Production].[Product]";
-                SqlDataReader dataReader;
-                    dataReader = command.ExecuteReader();
-                    while (dataReader.Read())
-                    {
-                        Console.WriteLine(dataReader[0] + " | " + dataReader[1] + "|"  + dataReader[2]);
-                    }
-                    dataReader.Close();
-
-                    // insert record
-
-
-                    //var Name = "New Scrap Reason| " + DateTime.Now.ToShortTimeString();
-                    //var CurrentTime = DateTime.Now;
-                    //command.CommandText = string.Format(@"INSERT INTO [Production].[ScrapReason] ([Name] ,[ModifiedDate]) VALUES ('{0}','{1}')", Name, CurrentTime);
-                    //var rowsAffected = command.ExecuteNonQuery();
-                    //Console.WriteLine("Dodano {0} rekordów", rowsAffected);
-                    
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                Console.WriteLine("Id: {0}, Name: {1}, Color: {2}", product.ProductID, product.Name, product.Color);
             }
-            Console.ReadLine();
         }
     }
 }
