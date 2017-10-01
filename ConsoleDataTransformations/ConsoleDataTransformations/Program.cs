@@ -51,7 +51,7 @@ namespace ConsoleDataTransformations
                     Console.WriteLine("Podaj ID wiersza, ktory chcesz usunac");
                     int IdToDelete = Int32.Parse(Console.ReadLine());
                     command.CommandText = string.Format(@"DELETE FROM [Production].[ScrapReason] WHERE [ScrapReasonID] = {0}", IdToDelete);
-                    var rowsAffected = command.ExecuteNonQuery();
+                    var rowsAffected3 = command.ExecuteNonQuery();
                     Console.WriteLine("Usunieto {0} rekordów", rowsAffected);
                 }
                 catch (Exception)
