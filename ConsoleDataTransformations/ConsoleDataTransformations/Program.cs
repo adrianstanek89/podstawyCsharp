@@ -15,13 +15,13 @@ namespace ConsoleDataTransformations
         {
 
             AWDataContext dbContext = new AWDataContext();
-            foreach (var product in dbContext.Product)
-            {
-                Console.WriteLine("Id: {0}, Name: {1}, Color: {2}", product.ProductID, product.Name, product.Color);
-            }
+            //foreach (var product in dbContext.Product)
+            //{
+            //    Console.WriteLine("Id: {0}, Name: {1}, Color: {2}", product.ProductID, product.Name, product.Color);
+            //}
             foreach (var order in dbContext.SalesOrderHeader)
             {
-                Console.WriteLine("SalesHeaderID: {0}, OrderDate: {1}, Status: {2}, TotalDue: {3}", order.SalesHeaderID, order.OrderDate, order.Status, order.TotalDue);
+                Console.WriteLine("SalesHeaderID: {0}, OrderDate: {1}, Status: {2}, TotalDue: {3}", order.SalesOrderID, order.OrderDate, order.Status, order.TotalDue);
             }
         }
     }
