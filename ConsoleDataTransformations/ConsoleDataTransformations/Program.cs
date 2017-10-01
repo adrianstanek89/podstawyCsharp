@@ -29,11 +29,17 @@ namespace ConsoleDataTransformations
 
                     // insert record
 
-                    var Name = "New Scrap Reason| " + DateTime.Now.ToShortTimeString();
-                    var CurrentTime = DateTime.Now;
-                    command.CommandText = string.Format(@"INSERT INTO [Production].[ScrapReason] ([Name] ,[ModifiedDate]) VALUES ('{0}','{1}')", Name, CurrentTime);
+
+                    //var Name = "New Scrap Reason| " + DateTime.Now.ToShortTimeString();
+                    //var CurrentTime = DateTime.Now;
+                    //command.CommandText = string.Format(@"INSERT INTO [Production].[ScrapReason] ([Name] ,[ModifiedDate]) VALUES ('{0}','{1}')", Name, CurrentTime);
+                    //var rowsAffected = command.ExecuteNonQuery();
+                    //Console.WriteLine("Dodano {0} rekordów", rowsAffected);
+                    string NameOne = "One One One ";
+
+                    command.CommandText = string.Format(@"UPDATE [Production].[ScrapReason] SET [Name] ='{0}' WHERE  [Production].[ScrapReason].ScrapReasonID = 6", NameEdit);
                     var rowsAffected = command.ExecuteNonQuery();
-                    Console.WriteLine("Dodano {0} rekordów", rowsAffected);
+                    Console.WriteLine("Edytowano {0} rekordów", rowsAffected);
                 }
                 catch (Exception)
                 {
