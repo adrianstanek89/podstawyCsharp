@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Program
+   public abstract class samochód
     {
-      
-        static void Main(string[] args)
-        {
-           
-        }
+       public abstract void ShowMarka();
+       public abstract void ShowSilnik();
+       public abstract void ShowKolor();
     }
 }
