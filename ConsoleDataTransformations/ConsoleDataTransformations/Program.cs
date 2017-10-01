@@ -23,9 +23,17 @@ namespace ConsoleDataTransformations
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        Console.WriteLine(dataReader[0] + " | " + dataReader[1] + "|"
-                       + dataReader[2]);
+                        Console.WriteLine(dataReader[0] + " | " + dataReader[1] + "|"  + dataReader[2]);
                     }
+                    dataReader.Close();
+
+                    // insert record
+
+                    var Name = "New Scrap Reason| " + DateTime.Now.ToShortTimeString();
+                    var CurrentTime = DateTime.Now;
+                    command.CommandText = string.Format(@"INSERT INTO [Production].[ScrapReason] ([Name] ,[ModifiedDate]) VALUES ('{0}','{1}')", Name, CurrentTime);
+                    var rowsAffected = command.ExecuteNonQuery();
+                    Console.WriteLine("Dodano {0} rekordów", rowsAffected);
                 }
                 catch (Exception)
                 {
