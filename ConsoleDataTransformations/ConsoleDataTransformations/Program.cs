@@ -37,9 +37,22 @@ namespace ConsoleDataTransformations
                     //Console.WriteLine("Dodano {0} rekordów", rowsAffected);
                     string NameOne = "One One One ";
 
-                    command.CommandText = string.Format(@"UPDATE [Production].[ScrapReason] SET [Name] ='{0}' WHERE  [Production].[ScrapReason].ScrapReasonID = 6", NameEdit);
+                    command.CommandText = string.Format(@"UPDATE [Production].[ScrapReason] SET [Name] ='{0}' WHERE  [Production].[ScrapReason].ScrapReasonID = 1 ", NameOne);
                     var rowsAffected = command.ExecuteNonQuery();
-                    Console.WriteLine("Edytowano {0} rekordów", rowsAffected);
+                    Console.WriteLine("Edytowano {0} rekordów", rowsAffected);
+
+                    string NameTwo = "two Two two ";
+
+                    command.CommandText = string.Format(@"UPDATE [Production].[ScrapReason] SET [Name] ='{0}' WHERE  [Production].[ScrapReason].ScrapReasonID = 2 ", NameTwo);
+                    var rowsAffected2 = command.ExecuteNonQuery();
+                    Console.WriteLine("Edytowano {0} rekordów", rowsAffected);
+
+
+                    Console.WriteLine("Podaj ID wiersza, ktory chcesz usunac");
+                    int IdToDelete = Int32.Parse(Console.ReadLine());
+                    command.CommandText = string.Format(@"DELETE FROM [Production].[ScrapReason] WHERE [ScrapReasonID] = {0}", IdToDelete);
+                    var rowsAffected = command.ExecuteNonQuery();
+                    Console.WriteLine("Usunieto {0} rekordów", rowsAffected);
                 }
                 catch (Exception)
                 {
