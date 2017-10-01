@@ -82,5 +82,6 @@ namespace ConsoleDataTransformations.EF
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SalesOrderDetail> SalesOrderDetail { get; set; }
+        public int SalesHeaderID { get; internal set; }
     }
 }
